@@ -10,4 +10,4 @@ yarn build
 yarn dev
 ```
 
-Preview Spanish with /?lang=es-ES or an RTL locale with /?lang=ar. The starter has no account flow, submission form, or analytics. Android packaging with Tauri follows review of the web foundation.
+Preview Spanish with /?lang=es-ES or an RTL locale with /?lang=ar. The private reporting form stays in browser memory and prints a Spanish-language draft. The menu links to the example message check, the draft, the example community alert and the official channels. Community submissions and sharing are simulated locally in this frontend prototype. Android packaging with Tauri follows review of the web foundation.

@@ -76,3 +76,90 @@ li {
 }
 :focus-visible { outline: 3px solid #ae4c1a; outline-offset: 3px; }
 .hero :focus-visible { outline-color: #fff; }
+
+.panel {
+  margin-block-start: 1.2rem;
+  padding: clamp(1rem, 4vw, 2rem);
+  border: 1px solid #d7e3e2;
+  border-radius: .9rem;
+  background: #fff;
+}
+
+.panel h2 { margin-block-start: 0; }
+.panel p { max-inline-size: 66ch; overflow-wrap: anywhere; }
+
+form { display: grid; gap: 1rem; max-inline-size: 42rem; }
+input, textarea, button { font: inherit; }
+input, textarea {
+  display: block;
+  box-sizing: border-box;
+  inline-size: 100%;
+  margin-block-start: .35rem;
+  padding: .65rem;
+  border: 1px solid #9aabaa;
+  border-radius: .4rem;
+  color: inherit;
+  background: #fff;
+}
+textarea { resize: vertical; }
+
+button {
+  justify-self: start;
+  padding: .75rem 1rem;
+  border: 0;
+  border-radius: .5rem;
+  background: #075759;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:disabled { opacity: .6; cursor: default; }
+.channel-list { margin-block-end: 0; }
+.channel-list li { border-color: #d7e3e2; }
+.community-alert {
+  padding-block: .75rem;
+  border-block-start: 1px solid #d7e3e2;
+  scroll-margin-block: 1rem;
+}
+.print-draft { display: none; }
+
+@media print {
+  :root { background: #fff; color: #000; }
+  main { max-inline-size: none; padding: 0; }
+  .screen { display: none !important; }
+  .panel { border: 0; margin: 0; padding: 0; }
+  .print-draft { display: block; }
+  .print-draft h1 { max-inline-size: none; font-size: 24pt; }
+  .print-draft h2 { margin-block: 1.15rem .35rem; font-size: 14pt; }
+  .print-draft p { max-inline-size: none; white-space: pre-wrap; }
+}
+
+.workflow-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .7rem;
+  margin-block-end: 1.15rem;
+}
+
+.workflow-nav a {
+  padding: .55rem .7rem;
+  border: 1px solid #c8dbda;
+  border-radius: .45rem;
+  background: #fff;
+  color: #123f45;
+  text-underline-offset: .16em;
+}
+
+.prototype-note {
+  color: #8af5e5;
+  font-size: .9rem;
+  margin-block: 0 .65rem;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-inline-start: .25rem solid #5ce8dc;
+  padding-inline-start: .8rem;
+}
+
+summary { cursor: pointer; font-weight: 650; }

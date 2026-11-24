@@ -11,7 +11,7 @@ export function PrivateReport({ messages: t }: { messages: ReportMessages }) {
   return (
     <section className="panel" aria-labelledby="private-report">
       <div className="screen">
-        <h2 id="private-report">{t.caseTitle}</h2>
+        <h2 id="private-report" tabIndex={-1}>{t.caseTitle}</h2>
         <p>{t.local}</p>
         <form onSubmit={(event) => { event.preventDefault(); if (ready) window.print(); }} autoComplete="off">
           <label>

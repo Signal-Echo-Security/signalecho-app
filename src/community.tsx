@@ -36,7 +36,7 @@ export function Community({ messages: t, prototype, names, locale }: {
   return (
     <div className="screen">
       <section className="panel" aria-labelledby="community-submit">
-        <h2 id="community-submit">{t.community}</h2>
+        <h2 id="community-submit" tabIndex={-1}>{t.community}</h2>
         <form onSubmit={(event) => { event.preventDefault(); simulateSubmission(); }}>
           <label>
             {t.community}
@@ -59,7 +59,7 @@ export function Community({ messages: t, prototype, names, locale }: {
         <p role="status">{status === "received" ? prototype.simulated : status === "failed" ? t.failure : ""}</p>
       </section>
       <section className="panel" aria-labelledby="community-alerts">
-        <h2 id="community-alerts">{t.alerts}</h2>
+        <h2 id="community-alerts" tabIndex={-1}>{t.alerts}</h2>
         <article className="community-alert" id={sampleId}>
           <h3>{prototype.sample}</h3>
           <p><strong>{names.delivery}</strong></p>
